@@ -84,35 +84,35 @@
 #
     3. 로컬호스트 들어갔다 나오기
 #
-    ssh localhost
-    exit
-    (ctrl + d)
+        ssh localhost
+        exit
+        (ctrl + d)
 #
     4. 하둡다운로드
 #
-    cd /home
-    mkdir hadoop
-    cd hadoop
-    wget http://apache.tt.co.kr/hadoop/common/hadoop-2.7.1/hadoop-2.7.1.tar.gz
-    tar -zxvf hadoop-2.7.1.tar.gz
+        cd /home
+        mkdir hadoop
+        cd hadoop
+        wget http://apache.tt.co.kr/hadoop/common/hadoop-2.7.1/hadoop-2.7.1.tar.gz
+        tar -zxvf hadoop-2.7.1.tar.gz
 #
     5. 컨피규어링
 #
     
-    $vi $HOME/.bashrc
+        $vi $HOME/.bashrc
 
-    # 아래 11개 export 만 추가해주면 됨
-    export JAVA_HOME=/usr/java/jdk1.8
-    export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
-    export HADOOP_HOME=/home/hadoop/hadoop-2.7.1
-    export HADOOP_INSTALL=$HADOOP_HOME
-    export HADOOP_MAPRED_HOME=$HADOOP_HOME
-    export HADOOP_COMMON_HOME=$HADOOP_HOME
-    export HADOOP_HDFS_HOME=$HADOOP_HOME
-    export HADOOP_YARN_HOME=$HADOOP_HOME
-    export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-    export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
-    export JAVA_LIBRARY_PATH=$HADOOP_HOME/lib/native:$JAVA_LIBRARY_PATH
+        # 아래 11개 export 만 추가해주면 됨
+        export JAVA_HOME=/usr/java/jdk1.8
+        export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+        export HADOOP_HOME=/home/hadoop/hadoop-2.7.1
+        export HADOOP_INSTALL=$HADOOP_HOME
+        export HADOOP_MAPRED_HOME=$HADOOP_HOME
+        export HADOOP_COMMON_HOME=$HADOOP_HOME
+        export HADOOP_HDFS_HOME=$HADOOP_HOME
+        export HADOOP_YARN_HOME=$HADOOP_HOME
+        export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+        export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+        export JAVA_LIBRARY_PATH=$HADOOP_HOME/lib/native:$JAVA_LIBRARY_PATH
 
-    # 실행
-    $source $HOME/.bashrc
+        # 실행
+        $source $HOME/.bashrc
