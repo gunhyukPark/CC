@@ -56,14 +56,14 @@
 
         vi /etc/profile
 
-    밑에 export 3줄만 추가
+        밑에 export 3줄만 추가
 
         export JAVA_HOME=/usr/java/jdk1.8
         export PATH=$JAVA_HOME/bin:$PATH
-    export CLASSPATH=$CLASSPATH:$JAVA_HOME/jre/lib/ext:$JAVA_HOME/lib/tools.jar
+        export CLASSPATH=$CLASSPATH:$JAVA_HOME/jre/lib/ext:$JAVA_HOME/lib/tools.jar
 
-    # 실행
-    source /etc/profile
+        # 실행
+        source /etc/profile
 
 #
 
