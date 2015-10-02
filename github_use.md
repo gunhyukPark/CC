@@ -1,6 +1,8 @@
 # Cent OS 설치
 
-/* su
+/* 
+
+ su
 
  yum install git
  
