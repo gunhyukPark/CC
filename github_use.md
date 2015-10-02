@@ -44,8 +44,8 @@ git remote rename origin origin_re
 
 ### url return error
 
-git remote set-url origin git@github.com:kowonsik/레포지터리이름.git
+        git remote set-url origin git@github.com:kowonsik/레포지터리이름.git
 
 ### public key error 참고링크
 
-http://uiandwe.tistory.com/992
+        http://uiandwe.tistory.com/992
