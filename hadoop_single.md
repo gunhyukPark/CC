@@ -63,4 +63,45 @@
     # 실행
     source /etc/profile
 
-2. 계정 추가
+#
+
+        2. 계정 추가
+        
+        # SSH 설치 및 공개 키 설정 
+    #   Hadoop클러스터에서 Master와 Slave들 간에 통신은 SSH를 이용함
+    #   모든 컴퓨터에는  SSH가 설치되어 있어야 함
+    #   Master에서 암호없이 Slave에 접속하기 위해서 공개 키가 필요함
+
+    useradd hadoop
+    su - hadoop
+    ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
+    cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
+    chmod 0600 ~/.ssh/authorized_keys
+3. 로컬호스트 들어갔다 나오기
+    ssh localhost
+    exit
+    (ctrl + d)
+4. 하둡다운로드
+    cd /home
+    mkdir hadoop
+    cd hadoop
+    wget http://apache.tt.co.kr/hadoop/common/hadoop-2.7.1/hadoop-2.7.1.tar.gz
+    tar -zxvf hadoop-2.7.1.tar.gz
+5. 컨피규어링
+    $vi $HOME/.bashrc
+
+    # 아래 11개 export 만 추가해주면 됨
+    export JAVA_HOME=/usr/java/jdk1.8
+    export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+    export HADOOP_HOME=/home/hadoop/hadoop-2.7.1
+    export HADOOP_INSTALL=$HADOOP_HOME
+    export HADOOP_MAPRED_HOME=$HADOOP_HOME
+    export HADOOP_COMMON_HOME=$HADOOP_HOME
+    export HADOOP_HDFS_HOME=$HADOOP_HOME
+    export HADOOP_YARN_HOME=$HADOOP_HOME
+    export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+    export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+    export JAVA_LIBRARY_PATH=$HADOOP_HOME/lib/native:$JAVA_LIBRARY_PATH
+
+    # 실행
+    $source $HOME/.bashrc
