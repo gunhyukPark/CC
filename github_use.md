@@ -1,10 +1,10 @@
-### Cent OS 설치
+# Cent OS 설치
 
 su
 
 yum install git
 
-### git 사용법
+# git 사용법
 
 mkdir ~/workspace
 
