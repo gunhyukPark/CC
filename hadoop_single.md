@@ -29,7 +29,7 @@
         wget http://chrome.richardlloyd.org.uk/install_chrome.sh
         chmod u+x install_chrome.sh
         ./install_chrome.sh
-#
+# Hadoop 설치하기
         [기존 java 삭제하기] # centos 경우에는 자바 설치가 되어 있지 않으므로 따로 실행할 필요 없음
 
         yum -y remove "java-*"
