@@ -79,17 +79,23 @@
     chmod 0600 ~/.ssh/authorized_keys
 #
     3. 로컬호스트 들어갔다 나오기
+    
     ssh localhost
     exit
     (ctrl + d)
 #
     4. 하둡다운로드
+    
     cd /home
     mkdir hadoop
     cd hadoop
     wget http://apache.tt.co.kr/hadoop/common/hadoop-2.7.1/hadoop-2.7.1.tar.gz
     tar -zxvf hadoop-2.7.1.tar.gz
-5. 컨피규어링
+
+#
+
+    5. 컨피규어링
+    
     $vi $HOME/.bashrc
 
     # 아래 11개 export 만 추가해주면 됨
