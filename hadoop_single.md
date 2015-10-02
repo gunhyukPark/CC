@@ -35,8 +35,9 @@
         yum -y remove "java-*"
         
         1. jdk 다운로드
-        
+#
         arch명령어를 통해 비트수 확인 후 설치
+#
         
             cd ~/Downloads
 
