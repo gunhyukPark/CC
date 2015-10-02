@@ -62,3 +62,5 @@
 
     # 실행
     source /etc/profile
+
+2. 계정 추가
