@@ -1,8 +1,8 @@
 # Cent OS 설치
 
-###su
+su
 
-###yum install git
+yum install git
 
 # git 사용법
 
