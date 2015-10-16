@@ -50,7 +50,7 @@ git remote rename origin origin_re
 
         http://uiandwe.tistory.com/992
 
-# 2015 10 16
+# 2015-10-16
 ###중간고사 
         1. 클라우드 컴퓨팅
         2. 구글 검색 시스템
