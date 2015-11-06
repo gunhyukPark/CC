@@ -154,7 +154,7 @@ http://centos.org/download
         cd ~/Downloads
 
         (64비트인 경우)
-        wget —no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie"             http://download.oracle.com/otn-pub/java/jdk/8u5-b13/jdk-8u5-linux-x64.tar.gz
+        wget —no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie"http://download.oracle.com/otn-pub/java/jdk/8u5-b13/jdk-8u5-linux-x64.tar.gz
 
         (32비트인 경우)
         wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-i586.tar.gz"
