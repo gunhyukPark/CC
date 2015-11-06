@@ -136,3 +136,7 @@ http://centos.org/download
 
 
 
+# OpenTSDB Install
+
+        # root 권한으로 필요시 수행
+        yum -y update
