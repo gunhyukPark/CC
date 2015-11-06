@@ -189,11 +189,11 @@ http://centos.org/download
         hbase_rootdir=${TMPDIR-'/usr/local/data'}/tsdhbase
         iface=lo'uname | sed -n s/Darwin/0/p'
 
-###hbase-site.xml correction
+####hbase-site.xml correction
 
         vim conf/hbase-site.xml
 
-###configuration Add to between the tags
+####configuration Add to between the tags
 
     <configuration>
             <property>
@@ -205,3 +205,43 @@ http://centos.org/download
             <value>/DRECTORY/zookeeper</value>
         </property>
     </configuration>
+
+####hbase.sh Run
+
+        ./bin/start-hbase.sh
+
+####GnuPlot Install
+
+        cd /usr/local
+        yum install ant ant-nodeps lzo-devel.x86_64
+        yum list \*gd\*
+        yum install gd-devel.i686
+        wget http://sourceforge.net/projects/gnuplot/files/gnuplot/4.6.3/gnuplot-4.6.3.tar.gz
+        tar zxvf gnuplot-4.6.3.tar.gz
+        cd gnuplot-4.6.3
+        ./configure
+        make install
+        yum install gnuplot
+        # apt-get install dh-autoreconf
+
+####OpenTSDB Install
+
+        cd /usr/local
+
+        # 필요시 yum install git
+        git clone git://github.com/OpenTSDB/opentsdb.git
+
+        cd opentsdb
+        yum install autoconf
+        yum install automake
+        ./build.sh  <- It takes about 10 minutes to complete.
+        env COMPRESSION=NONE HBASE_HOME=/usr/local/data/hbase-1.1.2 ./src/create_table.sh 
+        tsdtmp=${TMPDIR-'/usr/local/data'}/tsd
+        mkdir -p "$tsdtmp"
+
+####Open TSDB Run
+
+        ./build/tsdb tsd --port=4242 --staticroot=build/staticroot --cachedir=/usr/local/data --auto-metric
+        
+        # 웹 브라우저에서 확인 ( firefox )
+        http://127.0.0.1:4242
