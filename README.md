@@ -245,3 +245,34 @@ http://centos.org/download
         
         # 웹 브라우저에서 확인 ( firefox )
         http://127.0.0.1:4242
+
+####Data Input Test(Restful 방법)
+
+        # openTSDB 동작중인 터미널은 닫지 말고..
+        # 새로운 터미널을 열고 진행하세요...
+
+        sudo yum install python-setuptools python-setuptools-devel
+        sudo easy_install pip
+        pip install requests
+
+        vim post_test.py
+#
+        import time
+        import requests
+        import json
+
+        url = "http://127.0.0.1:4242/api/put"
+
+        data = {
+            "metric": "foo.bar",
+            "timestamp": time.time(),
+            "value": 2015,
+            "tags": {
+            "host": "mypc"
+            }
+        }
+
+        ret = requests.post(url, data=json.dumps(data))
+        print "ok"
+
+
