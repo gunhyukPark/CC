@@ -148,9 +148,9 @@ http://centos.org/download
         [기존 java 삭제하기] 
         # 기존 시간에 설정한 사람은 다시 할 필요 없음
         # yum -y remove "java-*"
-
+#
         1. jdk 다운로드
-
+#
         cd ~/Downloads
 
         (64비트인 경우)
