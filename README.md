@@ -1,7 +1,7 @@
 
-###1.CentOS 설치
-###2.Hadoop 설치
-###3.OpenTSDB 설치
+####1.CentOS 설치
+####2.Hadoop 설치
+####3.OpenTSDB 설치
 
 # CentOS Download
 
