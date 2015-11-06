@@ -176,3 +176,32 @@ http://centos.org/download
         # 실행
         source /etc/profile
     
+#
+
+##hbase Install(버전이 바뀔수도 있음)
+
+        cd /usr/local
+        mkdir data
+        cd data
+        wget http://www.apache.org/dist/hbase/stable/hbase-1.1.2-bin.tar.gz
+        tar xvfz hbase-1.1.2-bin.tar.gz
+        cd hbase-1.1.2
+        hbase_rootdir=${TMPDIR-'/usr/local/data'}/tsdhbase
+        iface=lo'uname | sed -n s/Darwin/0/p'
+
+###hbase-site.xml correction
+
+        vim conf/hbase-site.xml
+
+###configuration Add to between the tags
+
+    <configuration>
+            <property>
+                <name>hbase.rootdir</name>
+                <value>file:///DIRECTORY/hbase</value>
+            </property>
+        <property>
+            <name>hbase.zookp.property.eataDir</name>
+            <value>/DRECTORY/zookeeper</value>
+        </property>
+    </configuration>
