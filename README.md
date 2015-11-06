@@ -274,5 +274,7 @@ http://centos.org/download
 
         ret = requests.post(url, data=json.dumps(data))
         print "ok"
-
-
+#
+        python post_test.py
+        
+        http://127.0.0.1:4242
