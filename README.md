@@ -278,3 +278,14 @@ http://centos.org/download
         python post_test.py
         
         http://127.0.0.1:4242
+
+
+#
+
+    
+    
+## Data Input Test(Restful 방법)
+
+        sudo yum install python-setuptools python-setuptools-devel
+        sudo easy_install pip
+        pip install requests
